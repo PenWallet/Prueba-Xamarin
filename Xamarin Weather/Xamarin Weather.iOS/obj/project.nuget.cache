@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "xVck0KP4V/MhiR2HOln8nTNsPT2wpGiiJDmHrB9JgHOSRwDn4YcthmALNgBNZSCMVZ7/CPjJwsvtbKVs+a7GWg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Oscar\\Desktop\\GitHub\\Prueba-Xamarin\\Xamarin Weather\\Xamarin Weather.iOS\\Xamarin Weather.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
+  ],
+  "logs": []
+}
