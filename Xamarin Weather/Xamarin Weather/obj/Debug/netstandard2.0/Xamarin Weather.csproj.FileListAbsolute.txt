@@ -2,14 +2,11 @@ C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\bin
 C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\bin\Debug\netstandard2.0\Xamarin Weather.dll
 C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\bin\Debug\netstandard2.0\ref\Xamarin Weather.dll
 C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\bin\Debug\netstandard2.0\Xamarin Weather.pdb
-C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj\Debug\netstandard2.0\Xamarin Weather.csprojAssemblyReference.cache
 C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
-C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
-C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
-C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
-C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
-C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj\Debug\netstandard2.0\Views\ForecastPage.xaml.g.cs
+C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj\Debug\netstandard2.0\Views\HistoryPage.xaml.g.cs
+C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj\Debug\netstandard2.0\Views\TodayPage.xaml.g.cs
 C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj\Debug\netstandard2.0\Xamarin Weather.AssemblyInfoInputs.cache
 C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj\Debug\netstandard2.0\Xamarin Weather.AssemblyInfo.cs
 C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj\Debug\netstandard2.0\Xamarin Weather.csproj.CoreCompileInputs.cache
@@ -17,3 +14,4 @@ C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj
 C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj\Debug\netstandard2.0\Xamarin Weather.dll
 C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj\Debug\netstandard2.0\ref\Xamarin Weather.dll
 C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj\Debug\netstandard2.0\Xamarin Weather.pdb
+C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather\obj\Debug\netstandard2.0\Xamarin Weather.csprojAssemblyReference.cache

@@ -11,9 +11,9 @@ namespace Xamarin_Weather
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
-            Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
+            Routing.RegisterRoute(nameof(TodayPage), typeof(TodayPage));
+            Routing.RegisterRoute(nameof(ForecastPage), typeof(ForecastPage));
+            Routing.RegisterRoute(nameof(HistoryPage), typeof(HistoryPage));
         }
 
     }
