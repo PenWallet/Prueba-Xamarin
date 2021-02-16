@@ -5,12 +5,15 @@
              xmlns:vm="clr-namespace:Xamarin_Weather.ViewModels"
              xmlns:conv="clr-namespace:Xamarin_Weather.Converters"
              Title="{Binding weatherToday.name, StringFormat='Weather in {0}'}"
-             BindingContext="{x:Static vm:ViewModelLocator.todayViewModel}">
+             BackgroundColor="#abdbeb">
     <ContentPage.Resources>
         <conv:UnixToTimeConverter x:Key="UTTConverter"/>
         <conv:RainToStringConverter x:Key="RTSConverter"/>
         <conv:StringToIconConverter x:Key="STIConverter"/>
     </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <vm:TodayViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -34,15 +37,15 @@
             <!-- Top right, containing description, temperature and feels-like temperature -->
             <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Vertical" VerticalOptions="Center">
                 <Label Text="{Binding weatherToday.weather[0].main}" FontSize="Title"/>
-                <Label Text="{Binding weatherToday.main.temp, StringFormat='{0:N1}ºC'}" FontSize="Title"/>
-                <Label Text="{Binding weatherToday.main.feels_like, StringFormat='Feels like: {0:N1}ºC'}" FontSize="Subtitle"/>
+                <Label Text="{Binding weatherToday.main.temp, StringFormat='{0:0.#}ºC'}" FontSize="Title"/>
+                <Label Text="{Binding weatherToday.main.feels_like, StringFormat='Feels like: {0:0.#}ºC'}" FontSize="Subtitle"/>
             </StackLayout>
 
             <Image Source="precipitation.png" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" Margin="0, 0, 20, 0" WidthRequest="50" HeightRequest="50"/>
             <Label Text="{Binding weatherToday.rain._1h, Converter={StaticResource RTSConverter}}" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" FontSize="Title"/>
 
             <Image Source="wind.png" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" Margin="0, 0, 20, 0" WidthRequest="50" HeightRequest="50"/>
-            <Label Text="{Binding weatherToday.wind.speed, StringFormat='{0:N2} m/s'}" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" FontSize="Title"/>
+            <Label Text="{Binding weatherToday.wind.speed, StringFormat='{0:0.##} m/s'}" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" FontSize="Title"/>
 
             <Image Source="barometer.png" Grid.Row="3" Grid.Column="0" VerticalOptions="Center" HorizontalOptions="End" Margin="0, 0, 20, 0" WidthRequest="50" HeightRequest="50"/>
             <Label Text="{Binding weatherToday.main.pressure, StringFormat='{0:N0} millibars'}" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" FontSize="Title"/>

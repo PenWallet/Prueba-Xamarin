@@ -1,12 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Xamarin_Weather.Views.ForecastPage">
+             x:Class="Xamarin_Weather.Views.ForecastPage"
+             xmlns:vm="clr-namespace:Xamarin_Weather.ViewModels"
+             xmlns:conv="clr-namespace:Xamarin_Weather.Converters"
+             Title="Weather Forecast!">
+    <ContentPage.Resources>
+        <conv:UnixToCleanerDateConverter x:Key="UTCDConverter"/>
+        <conv:StringToIconConverter x:Key="STIConverter"/>
+    </ContentPage.Resources>
+    <ContentPage.BindingContext>
+        <vm:ForecastViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to this week's forecast!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ListView ItemsSource="{Binding weatherForecast.weatherData}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="#abdbeb" Orientation="Horizontal">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <!-- Time and date of forecast -->
+                                <Label Text="{Binding dt, Converter={StaticResource UTCDConverter}}" HorizontalTextAlignment="Center" Grid.Column="0"/>
+                                <!-- Icon -->
+                                <Image Source="{Binding weather[0].icon, Converter={StaticResource STIConverter}}" Grid.Column="1"/>
+                                <!-- Min and Max temperatures -->
+                                <StackLayout Orientation="Vertical" Grid.Column="2">
+                                    <Label Text="{Binding main.temp_min, StringFormat='{0:0.#}ºC'}" TextColor="#1930e0" VerticalTextAlignment="Start"/>
+                                    <Label Text="{Binding main.temp_max, StringFormat='{0:0.#}ºC'}" TextColor="IndianRed"/>
+                                </StackLayout>
+
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </ContentPage.Content>
 </ContentPage>

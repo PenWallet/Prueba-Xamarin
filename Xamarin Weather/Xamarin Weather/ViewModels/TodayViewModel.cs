@@ -10,14 +10,20 @@ namespace Xamarin_Weather.ViewModels
     {
         public TodayViewModel()
         {
-            ViewModelLocator.weatherToday = WeatherAPICalls.GetTodayAndForecastWeather();
+            _weatherToday = WeatherAPICalls.GetTodayWeather();
         }
 
+        private WeatherToday _weatherToday;
         public WeatherToday weatherToday
         {
             get
             {
-                return ViewModelLocator.weatherToday;
+                return _weatherToday;
+            }
+            set
+            {
+                _weatherToday = value;
+                NotifyPropertyChanged(nameof(weatherToday));
             }
         }
 
@@ -25,7 +31,7 @@ namespace Xamarin_Weather.ViewModels
         {
             get
             {
-                if (weatherToday.dt < ViewModelLocator.weatherToday.sys.sunset)
+                if (_weatherToday.dt < _weatherToday.sys.sunset)
                     return "sun.png";
                 else
                     return "night.png";
@@ -36,10 +42,10 @@ namespace Xamarin_Weather.ViewModels
         {
             get
             {
-                if (weatherToday == null)
+                if (_weatherToday == null)
                     return "";
 
-                return string.Format(("GMT" + (weatherToday.timezone < 0 ? "" : "+") + "{0:0.#}"), weatherToday.timezone/3600);
+                return string.Format(("GMT" + (_weatherToday.timezone < 0 ? "" : "+") + "{0:0.#}"), _weatherToday.timezone/3600);
             }
         }
     }
