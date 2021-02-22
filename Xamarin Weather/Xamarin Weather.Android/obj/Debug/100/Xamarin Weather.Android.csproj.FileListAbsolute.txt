@@ -604,3 +604,4 @@ C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather.And
 C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather.Android\obj\Debug\100\stamp\_GenerateJavaStubs.stamp
 C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather.Android\obj\Debug\100\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather.Android\obj\Debug\100\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Oscar\Desktop\GitHub\Prueba-Xamarin\Xamarin Weather\Xamarin Weather.Android\obj\Debug\100\res\drawable\hot.png

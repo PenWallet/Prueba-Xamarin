@@ -36,7 +36,7 @@ namespace Xamarin_Weather.Models
         }
         public class Rain
         {
-            public double _1h { get; set; }
+            [JsonProperty("3h")]
             public double _3h { get; set; }
         }
 

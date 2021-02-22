@@ -8,6 +8,7 @@
     <ContentPage.Resources>
         <conv:UnixToCleanerDateConverter x:Key="UTCDConverter"/>
         <conv:StringToIconConverter x:Key="STIConverter"/>
+        <conv:RainClassToStringConverter x:Key="RCTSConverter"/>
     </ContentPage.Resources>
     <ContentPage.BindingContext>
         <vm:ForecastViewModel/>
@@ -23,18 +24,24 @@
                                     <RowDefinition Height="*"/>
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="2*"/>
                                 </Grid.ColumnDefinitions>
                                 <!-- Time and date of forecast -->
                                 <Label Text="{Binding dt, Converter={StaticResource UTCDConverter}}" HorizontalTextAlignment="Center" Grid.Column="0"/>
                                 <!-- Icon -->
                                 <Image Source="{Binding weather[0].icon, Converter={StaticResource STIConverter}}" Grid.Column="1"/>
                                 <!-- Min and Max temperatures -->
-                                <StackLayout Orientation="Vertical" Grid.Column="2">
-                                    <Label Text="{Binding main.temp_min, StringFormat='{0:0.#}ºC'}" TextColor="#1930e0" VerticalTextAlignment="Start"/>
+                                <StackLayout Orientation="Horizontal" Grid.Column="2">
+                                    <Image Source="hot.png"/>
                                     <Label Text="{Binding main.temp_max, StringFormat='{0:0.#}ºC'}" TextColor="IndianRed"/>
+                                </StackLayout>
+                                <!-- Rain -->
+                                <StackLayout Orientation="Horizontal" Grid.Column="3">
+                                    <Image Source="precipitation.png"/>
+                                    <Label Text="{Binding rain, Converter={StaticResource RCTSConverter}}" TextColor="Black"/>
                                 </StackLayout>
 
                             </Grid>
